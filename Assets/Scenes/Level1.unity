@@ -859,7 +859,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.25, y: 0}
+  m_Offset: {x: 0.25, y: -0.05}
   m_EdgeRadius: 0
   m_Points:
   - {x: -9.9995, y: -6}
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37eb6c794330c3446a7e2fcce6c9cc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelScroller
-  scrollSpeed: 7
+  scrollSpeed: 5
 --- !u!1 &1600326131
 GameObject:
   m_ObjectHideFlags: 0
