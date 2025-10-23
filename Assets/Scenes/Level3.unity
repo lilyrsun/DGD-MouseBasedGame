@@ -256,6 +256,37 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &267324935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267324936}
+  m_Layer: 0
+  m_Name: ChaosStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267324936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267324935}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -24.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049797123}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274099427
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +850,7 @@ Transform:
   m_GameObject: {fileID: 274099427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.91077, y: -23.7858, z: 0}
+  m_LocalPosition: {x: -10.1, y: -23.7858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1413,6 +1444,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &806617663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806617664}
+  m_Layer: 0
+  m_Name: ChaosEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806617664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806617663}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 40.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049797123}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049797121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1486,7 @@ GameObject:
   - component: {fileID: 1049797123}
   - component: {fileID: 1049797124}
   m_Layer: 0
-  m_Name: LevelScroller
+  m_Name: ChaosScroller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,6 +1507,8 @@ Transform:
   m_Children:
   - {fileID: 274099430}
   - {fileID: 1600326134}
+  - {fileID: 267324936}
+  - {fileID: 806617664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1049797124
@@ -1456,10 +1520,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1049797121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37eb6c794330c3446a7e2fcce6c9cc9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ef8adf66881a4e8aa104834ab7388ff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelScroller
-  scrollSpeed: 3
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosScroller
+  chaosStartMarker: {fileID: 267324936}
+  chaosEndMarker: {fileID: 806617664}
+  baseSpeed: 5
+  accel: 30
+  changeIntervalRange: {x: 3, y: 9}
+  minSpeed: -6
+  maxSpeed: 9
+  normalBias: 0
+  reverseChance: 0.86
+  burstChance: 0.86
+  burstMultiplier: 2
+  burstDuration: 0.6
+  endBuffer: 1
+  clampUpwardNearEnd: -2
 --- !u!1 &1600326131
 GameObject:
   m_ObjectHideFlags: 0
