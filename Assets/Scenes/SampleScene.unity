@@ -523,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37eb6c794330c3446a7e2fcce6c9cc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelScroller
-  baseSpeed: 2.5
-  speedRampPerSec: 0.15
+  scrollSpeed: 2
+  startActive: 0
 --- !u!1 &1395045157
 GameObject:
   m_ObjectHideFlags: 0

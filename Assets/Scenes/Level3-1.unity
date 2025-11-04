@@ -1460,6 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelScroller
   scrollSpeed: 3
+  startActive: 1
 --- !u!1 &1214218900
 GameObject:
   m_ObjectHideFlags: 0
