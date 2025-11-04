@@ -4,19 +4,33 @@ public class LevelStartUI : MonoBehaviour
 {
     [Header("Scrollers to activate")]
     public LevelScroller[] levelScrollers;
+    // public SegmentedLevelScroller[] segmentedScrollers;
 
     [Header("UI")]
-    public GameObject startButtonRoot;   // assign the button or a panel that holds it
+    public GameObject startButtonRoot;
 
     public void StartLevel()
     {
-        // turn on all the scrollers
+        Debug.Log("StartLevel() CALLED");  // <--- add this line
+
         foreach (var s in levelScrollers)
         {
-            if (s != null) s.SetActive(true);
+            if (s != null)
+            {
+                Debug.Log("Enabling LevelScroller on " + s.gameObject.name);
+                s.SetActive(true);
+            }
         }
 
-        // hide the UI button after click
+        // foreach (var s in segmentedScrollers)
+        // {
+        //     if (s != null)
+        //     {
+        //         Debug.Log("Enabling SegmentedLevelScroller on " + s.gameObject.name);
+        //         s.SetActive(true);
+        //     }
+        // }
+
         if (startButtonRoot != null)
             startButtonRoot.SetActive(false);
     }
