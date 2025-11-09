@@ -11,7 +11,6 @@ public class CheesePickup : MonoBehaviour
     {
         if (collected) return;
 
-        // Only react to the player mouse
         if (other.GetComponent<MouseController>() != null)
         {
             collected = true;
@@ -19,12 +18,18 @@ public class CheesePickup : MonoBehaviour
             if (pickupSound != null)
                 pickupSound.Play();
 
-            // Tell the manager we got some cheese
-            CheeseManager.Instance.AddCheese(value);
+            // Tell the *collection* cheese manager we got some cheese
+            if (CollectionCheeseManager.Instance != null)
+            {
+                CollectionCheeseManager.Instance.AddCheese(value);
+            }
+            else
+            {
+                Debug.LogWarning("No CollectionCheeseManager.Instance in scene!");
+            }
 
-            // If we used a sound on this object, you could delay destroy with a coroutine,
-            // but simplest is just:
             Destroy(gameObject);
         }
     }
+
 }

@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelStartUI
   levelScrollers:
-  - {fileID: 1569290916}
+  - {fileID: 0}
   startButtonRoot: {fileID: 1427852307}
 --- !u!4 &1068913197
 Transform:
