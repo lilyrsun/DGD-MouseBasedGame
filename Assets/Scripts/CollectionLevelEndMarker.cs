@@ -1,13 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectionLevelEndMarker : MonoBehaviour
 {
     [Header("References")]
-    public LevelScroller[] levelScrollers;   // all scrollers to stop
-    public CollectionLevelCompleteUI levelCompleteUI;  // UI controller to show overlay
+    public LevelScroller[] levelScrollers;              // all scrollers to stop
+    public CollectionLevelCompleteUI levelCompleteUI;   // UI controller to show overlay
+
+    [Header("Final Level Settings")]
+    [Tooltip("If true, and all cheese is collected when end is reached, load victorySceneName.")]
+    public bool isFinalLevel = false;
+    public string victorySceneName = "Victory";   // set this to your end screen scene name
 
     [Header("Trigger Settings")]
-    public float extraDistanceBelowCamera = 2f; // how far past the camera before we trigger
+    public float extraDistanceBelowCamera = 2f;
 
     Transform cam;
     bool triggered = false;
@@ -21,8 +27,6 @@ public class CollectionLevelEndMarker : MonoBehaviour
     {
         if (triggered || cam == null) return;
 
-        // Map is moving DOWN. This marker is a child of the moving level root.
-        // When its world Y is lower than (camera Y - extraDistance), we consider the level "passed".
         float thresholdY = cam.position.y - extraDistanceBelowCamera;
 
         if (transform.position.y <= thresholdY)
@@ -36,9 +40,22 @@ public class CollectionLevelEndMarker : MonoBehaviour
                     scroller.SetActive(false);
             }
 
-            // Show "Level Complete" overlay
-            if (levelCompleteUI != null)
-                levelCompleteUI.Show();
+            bool hasAllCheese = false;
+            if (CollectionCheeseManager.Instance != null)
+                hasAllCheese = CollectionCheeseManager.Instance.AllCheeseCollected();
+
+            // FINAL LEVEL + all cheese -> go straight to victory scene
+            if (isFinalLevel && hasAllCheese)
+            {
+                Time.timeScale = 1f; // make sure game isn't paused
+                SceneManager.LoadScene(victorySceneName);
+            }
+            else
+            {
+                // Otherwise, show the panel ("Still Hungry..." or "Level Complete!")
+                if (levelCompleteUI != null)
+                    levelCompleteUI.Show();
+            }
         }
     }
 }
