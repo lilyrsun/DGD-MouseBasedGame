@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e680f93523884ab9ba3f2727bc3210a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  firstLevelSceneName: Level1
+  firstLevelSceneName: Level1-CutScene
 --- !u!4 &860810511
 Transform:
   m_ObjectHideFlags: 0

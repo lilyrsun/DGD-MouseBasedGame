@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: cf41c7b5bfee540a2857a5bad1c96a73
   - enabled: 1
+    path: Assets/Scenes/Level1-CutScene.unity
+    guid: 879f9efbb65c14dc8ab2bc769e82f31e
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 017a449cf7d184e90b4ecd2d2643698b
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 426e1bd048b4646699385c6451ed24db
+  - enabled: 1
+    path: Assets/Scenes/Level3-CutScene.unity
+    guid: 342c06e4d6f7948468f8bb327504667c
   - enabled: 1
     path: Assets/Scenes/Level3-1.unity
     guid: ec8a7a8b5f0a94bbbab022df3f4c50d6
@@ -24,11 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3-2.unity
     guid: e377fdac745f54857913ea06ed689205
   - enabled: 1
+    path: Assets/Scenes/Level4-CutScene.unity
+    guid: 114761b4e3b304998b586bad663688f7
+  - enabled: 1
     path: Assets/Scenes/Level4-1.unity
     guid: 63573ade639394452a593af0666f5006
   - enabled: 1
     path: Assets/Scenes/Level4-2.unity
     guid: 48a0888caf5144a18a96e1da7921c8f5
+  - enabled: 1
+    path: Assets/Scenes/Level5-CutScene.unity
+    guid: 1c3bbcad4731b4b75b9153f81ff1f65a
   - enabled: 1
     path: Assets/Scenes/Level5-1.unity
     guid: 111c40b63b4b7419b8251847f09cf1d4

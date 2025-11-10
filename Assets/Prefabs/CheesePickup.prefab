@@ -105,7 +105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheesePickup
   value: 1
-  pickupSound: {fileID: 0}
+  pickupClip: {fileID: 8300000, guid: 94593cf44de7243beb536d234871e576, type: 3}
+  volume: 1
 --- !u!58 &8605090603976161922
 CircleCollider2D:
   m_ObjectHideFlags: 0
