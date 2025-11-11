@@ -12,20 +12,19 @@
 
 ---
 
-## 🧩 About the Game
+## 🧩 what's the game about?
 Colby has been separated from Cookie! Now, he needs to navigate through the walls (without hitting any of them) to find his way back to the huzz.
 
 **Built with:** Unity 🧱 | C# ⚙️ 
 
 ---
 
-## 🧠 Behind the Scenes
+## 🧠 behind the scenes
 This project was created as part of my **Digital Game Design course** at WashU.  
 
 ---
 
-## 💕 Play, Laugh, and Cheese On
-> “You’ll never know how much I loaf you… until you play.” 🧀🐭
+## 🧀🐭 thanks for checking out my lil game :)
 > ![Mice in Love](Assets/Art/Backgrounds/MiceInLove.png)
 
 Made with ❤️ by **[Lily Sun](https://github.com/lilyrsun)**
